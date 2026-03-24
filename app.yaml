@@ -1,16 +1,9 @@
 # Databricks App Configuration
-# This file defines how your app runs on Databricks
-
-command: ["streamlit", "run", "health_tracker_app.py", "--server.port", "8080", "--server.address", "0.0.0.0"]
-
+command: ["streamlit", "run", "health_tracker_app.py", "--server.port", "8000", "--server.address", "0.0.0.0"]
 env:
   - name: STREAMLIT_SERVER_HEADLESS
     value: "true"
   - name: STREAMLIT_BROWSER_GATHER_USAGE_STATS
     value: "false"
-  
-  # REQUIRED: SQL Warehouse HTTP Path for data access
-  # Get it from: SQL Warehouses > Select warehouse > Connection details tab
-  # Example: /sql/1.0/warehouses/abc123def456789
-  - name: DATABRICKS_HTTP_PATH
-    value: "/sql/1.0/warehouses/683cda50c0af28ea"
+  - name: DATABRICKS_WAREHOUSE_ID
+    value: "683cda50c0af28ea" 
