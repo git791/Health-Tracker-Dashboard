@@ -8,3 +8,9 @@ env:
     value: "true"
   - name: STREAMLIT_BROWSER_GATHER_USAGE_STATS
     value: "false"
+  
+  # REQUIRED: SQL Warehouse HTTP Path for data access
+  # Get it from: SQL Warehouses > Select warehouse > Connection details tab
+  # Example: /sql/1.0/warehouses/abc123def456789
+  - name: DATABRICKS_HTTP_PATH
+    value: "/sql/1.0/warehouses/683cda50c0af28ea"
